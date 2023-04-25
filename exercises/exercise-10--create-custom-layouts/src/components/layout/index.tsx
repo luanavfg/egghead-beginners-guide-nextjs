@@ -1,4 +1,6 @@
 import type { ReactNode } from 'react'
+import Navbar from './navbar'
+import Footer from './footer'
 
 type Props = {
   children?: ReactNode
@@ -6,7 +8,13 @@ type Props = {
 
 const Layout = ({ children }: Props) => {
   // ✍️ create the custom layout
-  return <></>
+  return (
+    <>
+      <Navbar />
+      {children}
+      <Footer />
+    </>
+  )
 }
 
 export default Layout
